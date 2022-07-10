@@ -82,7 +82,7 @@ public class AdderUI {
                 System.out.println("= " + add.getResult());
             } catch (NumberFormatException ex) {
                 System.out.println("The number is not an integer ");
-            } catch (adderException ex) {
+            } catch (AdderException ex) {
                 System.out.println(ex.getLocalizedMessage());
             } catch (IOException e) {
                 e.printStackTrace();

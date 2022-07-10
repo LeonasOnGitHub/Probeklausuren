@@ -7,7 +7,7 @@ public class AdderTest {
     Adder add = new AdderImpl();
 
     @Test
-    public void gutTest1() throws adderException {
+    public void gutTest1() throws AdderException {
         add.backdor(0);
         int num1 = 10;
         int num2 = 11;
@@ -18,7 +18,7 @@ public class AdderTest {
     }
 
     @Test
-    public void gutTest2() throws adderException {
+    public void gutTest2() throws AdderException {
         add.backdor(0);
 
         int num = 1;
@@ -29,7 +29,7 @@ public class AdderTest {
     }
 
     @Test
-    public void randTest1() throws adderException {
+    public void randTest1() throws AdderException {
         add.backdor(0);
         int num1 = Integer.MAX_VALUE - 1;
         int num2 = 1;
@@ -40,7 +40,7 @@ public class AdderTest {
     }
 
     @Test
-    public void randTest2() throws adderException {
+    public void randTest2() throws AdderException {
         add.backdor(0);
 
         int num = 1;
@@ -50,8 +50,8 @@ public class AdderTest {
         Assert.assertEquals(dummyInt, add.getResult());
     }
 
-    @Test(expected = adderException.class)
-    public void schlechtTest1() throws adderException {
+    @Test(expected = AdderException.class)
+    public void schlechtTest1() throws AdderException {
         add.backdor(0);
         int num1 = Integer.MAX_VALUE;
         int num2 = 1;
@@ -59,24 +59,24 @@ public class AdderTest {
         add.add(num1, num2);
     }
 
-    @Test(expected = adderException.class)
-    public void schlechtTest2() throws adderException {
+    @Test(expected = AdderException.class)
+    public void schlechtTest2() throws AdderException {
         add.backdor(1);
         int num1 = Integer.MAX_VALUE;
 
         add.add(num1);
     }
 
-    @Test(expected = adderException.class)
-    public void schlechtTest3() throws adderException {
+    @Test(expected = AdderException.class)
+    public void schlechtTest3() throws AdderException {
         add.backdor(0);
         int num1 = -1;
 
         add.add(num1);
     }
 
-    @Test(expected = adderException.class)
-    public void schlechtTest4() throws adderException {
+    @Test(expected = AdderException.class)
+    public void schlechtTest4() throws AdderException {
         add.backdor(0);
         int num1 = -1;
         int num2 = 1;

@@ -6,13 +6,13 @@ public interface Adder {
      * @param num1
      * @param num2
      */
-    void add(int num1, int num2) throws adderException;
+    void add(int num1, int num2) throws AdderException;
 
     /**
      * Add a positive integer number to the last calculation and write it into the result
      * @param num
      */
-    void add(int num) throws adderException;
+    void add(int num) throws AdderException;
 
     /**
      *
